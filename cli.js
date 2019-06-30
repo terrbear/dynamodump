@@ -200,6 +200,7 @@ function filterTable(table) {
   delete table.TableId;
 
   delete table.ProvisionedThroughput;
+  delete table.BillingModeSummary;
   table.BillingMode = "PAY_PER_REQUEST";
 
   (table.LocalSecondaryIndexes || []).forEach(index => {
